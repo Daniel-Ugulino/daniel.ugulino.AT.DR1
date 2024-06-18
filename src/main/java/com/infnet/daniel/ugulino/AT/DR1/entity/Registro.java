@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name="disciplina")
+@Table(name="registro")
 @Getter
 @Setter
 public class Registro {

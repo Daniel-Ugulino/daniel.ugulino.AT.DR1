@@ -18,7 +18,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 public class SecurityConfig {
 
     @Bean
-    public InMemoryUserDetailsManager createUserDetailsManager() {
+    public InMemoryUserDetailsManager createUserDetails() {
         UserDetails userDetails1 = createNewUser("infnet", "infnet2024");
 
         return new InMemoryUserDetailsManager(userDetails1);
@@ -31,7 +31,6 @@ public class SecurityConfig {
                 .passwordEncoder(passwordEncoder)
                 .username(username)
                 .password(password)
-                .roles("USER", "ADMIN")
                 .build();
     }
 
@@ -44,7 +43,6 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(auth -> auth.anyRequest().authenticated());
         http.httpBasic(withDefaults());
-
         http.csrf().disable();
         http.headers().frameOptions().disable();
 

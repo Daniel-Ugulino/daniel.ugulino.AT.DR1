@@ -87,7 +87,7 @@ class registroServiceTest {
         Registro registro1 = new Registro(disciplina1,aluno1,8.0);
 
         Disciplina disciplina2 = new Disciplina(54321L,"Python");
-        Aluno aluno2 = new Aluno("Aluno Test 2","123456789","test2@gmail.com","Rio de Janeiro","987654321");
+        Aluno aluno2 = new Aluno("Aluno Test 2","987654321","test2@gmail.com","Rio de Janeiro","123456789");
         Registro registro2 = new Registro(disciplina2,aluno2,2.0);
 
         when(registroRepository.findAll()).thenReturn(List.of(registro1, registro2));
@@ -102,7 +102,7 @@ class registroServiceTest {
         assertThat(testRegistros.get(1).getNota()).isEqualTo(2.0);
         assertThat(testRegistros.get(1).getAluno().getNome()).isEqualTo("Aluno Test 2");
         assertThat(testRegistros.get(1).getDisciplina().getNome()).isEqualTo("Python");
-        verify(registroRepository, times(2)).findAll();
+        verify(registroRepository, times(1)).findAll();
     }
 
     @Test
