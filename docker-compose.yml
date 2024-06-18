@@ -7,17 +7,5 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8085:8080"
-    environment:
-      - SPRING_DATASOURCE_USERNAME=infnet
-      - SPRING_DATASOURCE_PASSWORD=password
-    depends_on:
-      - db
 
-  db:
-    image: "oscarfonts/h2"
-    ports:
-      - "9092:9092"
-      - "8082:8082"
-      - "81:81"
-    environment:
-      - H2_OPTIONS=-tcp -tcpAllowOthers -web -webAllowOthers
+
