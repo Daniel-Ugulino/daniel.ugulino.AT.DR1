@@ -19,4 +19,4 @@ services:
       - "9092:9092"
       - "8082:8082"
     environment:
-      - H2_OPTIONS=-tcp -tcpAllowOthers -web -webAllowOtthers
+      - H2_OPTIONS=-tcp -tcpAllowOthers -web -webAllowOthers
