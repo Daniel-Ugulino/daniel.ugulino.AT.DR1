@@ -1,6 +1,5 @@
 package com.infnet.daniel.ugulino.AT.DR1.services;
 
-import com.infnet.daniel.ugulino.AT.DR1.entity.Aluno;
 import com.infnet.daniel.ugulino.AT.DR1.entity.Disciplina;
 import com.infnet.daniel.ugulino.AT.DR1.repository.disciplinaRepository;
 import org.junit.jupiter.api.BeforeEach;

@@ -2,7 +2,6 @@ package com.infnet.daniel.ugulino.AT.DR1.services;
 
 import com.infnet.daniel.ugulino.AT.DR1.entity.Aluno;
 import com.infnet.daniel.ugulino.AT.DR1.repository.alunoRepository;
-import com.infnet.daniel.ugulino.AT.DR1.repository.disciplinaRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
