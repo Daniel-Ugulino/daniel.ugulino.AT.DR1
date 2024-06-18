@@ -3,7 +3,6 @@ package com.infnet.daniel.ugulino.AT.DR1.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity

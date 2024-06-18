@@ -22,7 +22,7 @@ public class disciplinaController {
     public ResponseEntity<Object> getById(@PathVariable Long id){
         Disciplina disciplina;
         try {
-           disciplina = disciplinaService.findById(id);
+           disciplina = disciplinaService.findByCodigo(id);
         }catch (Exception e){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Erro ao Encontrar Disciplina");
         }
